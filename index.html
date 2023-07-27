@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="assets\bxslider-4-4.2.12\bxslider-4-4.2.12\src\css\jquery.bxslider.css">
+
+<!-- jQuery library (served from Google) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!-- bxSlider Javascript file -->
+<script src="assets\bxslider-4-4.2.12\bxslider-4-4.2.12\dist\jquery.bxslider.min.js"></script>
+<!-- bxSlider CSS file -->
+<link href="assets\bxslider-4-4.2.12\bxslider-4-4.2.12\src\css\jquery.bxslider.css" rel="stylesheet" />
+
+<!-- bxsliderのscript -->
+<script>
+    $(document).ready(function(){
+  $('.bxslider').bxSlider({
+    easing: 'ease-in-out',
+    captions: true,
+    auto: true,
+    controls: false,
+    maxSlides: 3,
+    minSlides: 2,
+  });
+});
+</script>
+    <!-- // JavaScriptの記述終了 -->
+
+    <!--jQueryのインポート-->
+    <script src="js\code.jquery.com_jquery-3.7.0.min.js"></script>
+
+    <!-- bx-wrapperにホバーしたとき、フェードインするスクリプト -->
+    <script>
+        $(function () {
+            $('.bx-wrapper').hover(function () {
+                $('.bx-caption').fadeIn();
+            }, function () {
+                $('.bx-caption').fadeOut();
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+    <!-- ヘッダー -->
+    <header>
+        <div class="SITE-HEADER">
+            <!-- クラス名がheader-textのh1タグ -->
+            <!--フォントは"Playfair Display"の400-->
+            <h1 class="header-text">Portfolio<br>Site</h1>
+
+            <div class="horizontal-line1">
+            </div>
+
+            <!-- ナビゲーション -->
+            <nav class="nav-bar">
+                <ul>
+                    <li><a href="index.html">ホーム</a></li>
+                    <li><a href="about.html">概要</a></li>
+                    <li><a href="contact.html">お問い合わせ</a></li>
+                    <li><a href="portfolio.html">ポートフォリオ</a></li>
+                </ul>
+            </nav>
+
+            <!-- ハンバーガーメニュー -->
+            <div class="hamburger-menu">
+                <!-- ハンバーガーメニューの線 -->
+                <div class="hamburger__line hamburger__line--1"></div>
+                <div class="hamburger__line hamburger__line--2"></div>
+                <div class="hamburger__line hamburger__line--3"></div>
+            </div>
+        </div>
+        <script>
+            // ハンバーガーメニューをクリックしたときに、ナビゲーションを表示する
+        </script>
+    </header>
+    <main>
+        <hero>
+            <div class="hero-text">
+                <h1>My Portfolio</h1>
+                <p>私の過去の作品の紹介</p>
+            </div>
+            <!--画像をスライドショーで表示-->
+            <div class="hero-images">
+                <ul class="bxslider">
+
+                    <li><img
+                            src="assets\imgs\Default_image_that_seem_to_have_lofty_principles_that_imagine_0_7852b14a-5bb9-4b75-90e9-d467cbc87275_1.jpg"
+                            title="月と少女" alt="hero-image1"></li>
+                    <li><img src="assets\imgs\Absolute_Reality_v16_ocean_Scifi_realistic_realistic_textures_0.jpg" title="画像1"
+                            alt="hero-image2"></li>
+                    <li><img src="assets\imgs\Absolute_Reality_v16_space_Scifi_realistic_realistic_textures_0.jpg" title="画像2" alt="hero-image3"></li>
+                    <li><img
+                            src="assets\imgs\Default_mystical_fish_natural_highlights_bright_colours_realis_0_135ebd48-f381-4e9b-97f5-d6e4163e5bc9_1.jpg" title="画像3"
+                            alt="hero-image4"></li>
+                    <li><img src="assets\imgs\Leonardo_Diffusion_scifi_smartphone_natural_highlights_bright_0.jpg" title="画像4"
+                            alt="hero-image5"></li>
+                </ul>
+            </div>
+
+        </hero>
+
+
+    </main>
+</body>
+
+<!--style-->
+<style>
+
+    .header-text {
+        /* フォントの種類 */
+        font-family: 'Playfair Display', serif;
+        /* フォントの太さ */
+        font-weight: 400;
+        /* フォントの大きさ */
+        font-size: 3rem;
+        text-align: left;
+        line-height: 1.35em;
+    }
+
+    /* ヘッダーの文字の下に線を引く */
+    .horizontal-line1 {
+        /* 線の色 */
+        background-color: #000;
+        /* 線の太さ */
+        height: 1px;
+        /* 線の長さ */
+        width: 80%;
+        /* 線を垂直中央に配置 */
+        margin: 0 auto;
+    }
+
+    .nav-bar {
+        /* ナビゲーションの文字の大きさ */
+        font-size: 1rem;
+    }
+
+    /*リストを横並びにする*/
+    .nav-bar ul {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+    }
+
+    .nav-bar li {
+        margin: 0 0.5rem;
+    }
+
+    /* ヒーローセクション */
+    .hero-text {
+        /* header-textと同じフォント */
+        font-family: 'Playfair Display', serif;
+        font-size: 2rem;
+        font-weight: 400;
+        text-align: center;
+        color: var(--main-text-color);
+    }
+
+    .hero-text p {
+        /* ヒーローセクションの文章の大きさ */
+        font-size: 1rem;
+    }
+
+    .hero-images img {
+        width: auto;
+        height: 50vh;
+        /*画像の位置を中央に*/
+        margin: 0 auto;
+    }
+</style>
+
+</html>
