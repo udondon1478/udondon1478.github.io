@@ -9,6 +9,36 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="assets\bxslider-4-4.2.12\bxslider-4-4.2.12\src\css\jquery.bxslider.css">
 
+    <!-- masonry -->
+    <script src="assets\js\unpkg.com_masonry-layout@4.2.2_dist_masonry.pkgd.min.js"></script>
+
+    <script>
+        $('#container').imagesLoaded(function () {
+            // images have loaded
+        });
+
+        // options
+        $('#container').imagesLoaded({
+            // options...
+        },
+            function () {
+                // images have loaded
+            }
+        );
+    </script>
+
+    <!-- 初期化 -->
+    <script>
+        $('.grid').masonry({
+            // options
+            itemSelector: '.grid-item',
+            columnWidth: 200
+        });
+    </script>
+
+    <!-- imagesloaded -->
+    <script src="assets\js\unpkg.com_imagesloaded@5.0.0_imagesloaded.pkgd.min.js"></script>
+
     <!-- jQuery library (served from Google) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- bxSlider Javascript file -->
@@ -83,39 +113,105 @@
     <main>
         <hero>
             <div class="hero-text">
-                <h1>My Portfolio</h1>
+                <h1>My Work</h1>
                 <p>私の過去の作品の紹介</p>
             </div>
             <!--画像をスライドショーで表示-->
             <div class="hero-images">
                 <ul class="bxslider">
 
-                    <li><img src="\assets\imgs\Default_image_that_seem_to_have_lofty_principles_that_imagine_0_7852b14a-5bb9-4b75-90e9-d467cbc87275_1.jpg"
+                    <li><img src="assets\imgs\Default_image_that_seem_to_have_lofty_principles_that_imagine_0_7852b14a-5bb9-4b75-90e9-d467cbc87275_1.jpg"
                             title="月と少女" alt="hero-image1"></li>
-                    <li><img src="\assets\imgs\Absolute_Reality_v16_ocean_Scifi_realistic_realistic_textures_0.jpg"
+                    <li><img src="assets\imgs\Absolute_Reality_v16_ocean_Scifi_realistic_realistic_textures_0.jpg"
                             title="画像1" alt="hero-image2"></li>
                     <li><img src="assets\imgs\Absolute_Reality_v16_space_Scifi_realistic_realistic_textures_0.jpg"
                             title="画像2" alt="hero-image3"></li>
                     <li><img src="assets\imgs\Default_mystical_fish_natural_highlights_bright_colours_realis_0_135ebd48-f381-4e9b-97f5-d6e4163e5bc9_1.jpg"
                             title="画像3" alt="hero-image4"></li>
                     <li><img src="assets\imgs\Leonardo_Diffusion_scifi_smartphone_natural_highlights_bright_0.jpg"
-                            title="画像4" alt="hero-image5"></li>
+                            title="画像4" alt="hero-image5"></li>http://127.0.0.1:3002/index.html
                 </ul>
             </div>
         </hero>
         <gallery>
-            <div class="image-container">
-                <img src="\assets\imgs\Default_image_that_seem_to_have_lofty_principles_that_imagine_0_b5e265c5-5558-43bd-a4b6-884f33a0055a_1.jpg" alt="Image 1" class="image-1">
-                <img src="/assets\imgs\Default_image_that_seem_to_have_lofty_principles_that_imagine_0_b5e265c5-5558-43bd-a4b6-884f33a0055a_1.jpg" alt="Image 2" class="image-2">
-            </div>
+            <!--画像を2行に配置し、画面の両端に矢印ボタンを配置、そのボタンがクリックされたら1列隣の画像を中心に持ってくる -->
+
         </gallery>
+        <contact>
+            <div class="contact-container">
+                <div class="float-square">
+                    <div class="lines">
+                        <div class="line">
+                            <!--線を引く、疑似要素beforeと疑似要素afterでwidthとheightが1remの黒背景を生成-->
+                        </div>
+                        <div class="star">
+                            <!-- 正方形を4つの円弧で角だけ削り取った図形(星っぽいやつ)を-->
+                            <div class="star_path right"></div>
+                            <div class="star_path left"></div>
+                        </div>
+                    </div>
+                    <div class="line">
+                        <!--線を引く、疑似要素beforeと疑似要素afterでwidthとheightが1remの黒背景を生成-->
+                    </div>
 
+                    <div class="contact-text">
+                        <h1>私のスキルを<br>活用しませんか？</h1>
+                    </div>
 
+                    <!--問い合わせボタン-->
+                    <div class="contact-button">
+                        <a href="contact.html">問い合わせる</a>
+                    </div>
+                </div>
+            </div>
+        </contact>
+        <subscribe>
+            <div class="subscribe-text">
+                <h2>購読フォーム</h2>
+            </div>
+            <div class="subscribe-form">
+                <!--サーバーを購入したら、実際に機能する購読フォーム用のプログラムを作成-->
+                <form action="">
+                    <input type="text" placeholder="email@example.com">
+                    <input type="submit" value="送信">
+                </form>
+            </div>
+        </subscribe>
+
+        <footer>
+            <div class="line"></div>
+            <!--mixcloudとtwitterのリンクを配置-->
+            <div class="footer-container">
+                <div class="social-links">
+                    <div class="mixcloud">
+                        <a href="https://www.mixcloud.com/udondon1478/" target="_blank"><img
+                                src="assets\imgs\faviconV2.png" alt="mixcloud"></a>
+                    </div>
+                    <div class="twitter">
+                        <a href="https://twitter.com/udondon1478VRC" target="_blank"><img
+                                src="assets\imgs\2021 Twitter logo - blue.png" alt="twitter"></a>
+                    </div>
+                </div>
+                <div class="footer-text">
+                    <p>© 2023 udondon1478</p>
+                </div>
+        </footer>
     </main>
 </body>
 
 <!--style-->
 <style>
+    /* リセットCSS */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .SITE-HEADER {
+        background-color: #d6ff4e;
+    }
+
     .header-text {
         /* フォントの種類 */
         font-family: 'Playfair Display', serif;
@@ -125,6 +221,7 @@
         font-size: 3rem;
         text-align: left;
         line-height: 1.35em;
+        margin-left: 8rem;
     }
 
     /* ヘッダーの文字の下に線を引く */
@@ -152,7 +249,13 @@
     }
 
     .nav-bar li {
-        margin: 0 0.5rem;
+        margin: 1rem 0.5rem;
+    }
+
+    .nav-bar a {
+        /* ナビゲーションの文字の色 */
+        color: #000;
+        text-decoration: none;
     }
 
     /* ヒーローセクション */
@@ -162,7 +265,9 @@
         font-size: 2rem;
         font-weight: 400;
         text-align: center;
-        color: var(--main-text-color);
+        color: #d6ff4e;
+        background-color: #101010;
+        padding: 2rem 0;
     }
 
     .hero-text p {
@@ -172,9 +277,292 @@
 
     .hero-images img {
         width: auto;
-        height: 50vh;
+        height: auto;
+
+        max-height: 50vh;
         /*画像の位置を中央に*/
         margin: 0 auto;
+    }
+
+    .bxslider {
+        /*class="slider"の子要素divを指定*/
+        height: 100%;
+        /*高さ指定*/
+        text-align: center;
+        font-size: 24px;
+        background: #171717;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /*背景色*/
+    }
+
+    /* ギャラリーセクション */
+    .gallery {
+        /* ギャラリーセクションの背景色 */
+        background-color: #d6ff4e;
+    }
+
+    /* コンタクトセクション */
+    .contact-container {
+        /* コンタクトセクションの背景色 */
+        background-color: #171717;
+        /* コンタクトセクションの高さ */
+        height: 60vh;
+        /* コンタクトセクションの幅 */
+        width: 100%;
+        /* コンタクトセクションの位置を中央に */
+        margin: 0 auto;
+        position: relative;
+    }
+
+    /*
+    .float-square .lines {
+        display: flex;
+        flex-direction: row;
+        margin-top: 2rem;
+    }
+
+    .float-square .line {
+        background-color: #bde145;
+        height: 1px;
+        width: 20%;
+    }
+    */
+
+
+    .float-square {
+        display: flex;
+        flex-direction: column;
+        /* float-squareの背景色 */
+        background-color: #d6ff4e;
+        /* float-squareの高さ */
+        height: 50%;
+        /* float-squareの幅 */
+        width: auto;
+        min-width: 30%;
+        max-width: 70%;
+        /* float-squareの位置をcontact-containerの中央に */
+        margin: 0 auto;
+
+        position: absolute;
+
+        top: 50%;
+
+        left: 50%;
+
+        transform: translate(-50%, -50%);
+        /* float-squareの角を丸くする */
+        border-radius: 2rem 2rem 2rem 2rem;
+    }
+
+
+    .contact-text {
+        text-align: center;
+        padding: 2rem 0;
+    }
+
+    .contact-button a {
+        /* ボタンの文字の色 */
+        color: #d6ff4e;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* ボタンの背景色 */
+        background-color: #000;
+        /* ボタンの文字の大きさ */
+        font-size: 1.5rem;
+        /* ボタンの幅 */
+        width: 15rem;
+        /* ボタンの高さ */
+        height: 5rem;
+
+        /* ボタンの角を丸くする */
+        border-radius: 2rem;
+        /* ボタンの文字の位置を中央に */
+        text-align: center;
+        /* ボタンの文字の位置を中央に */
+        line-height: 5rem;
+        /* ボタンの位置を中央に */
+        margin: 0 auto;
+        padding: 2rem;
+    }
+
+    /* 購読フォームセクション */
+    .subscribe-text {
+        /* 購読フォームセクションの背景色 */
+        background-color: #d6ff4e;
+        /* 購読フォームセクションの高さ */
+        height: 10vh;
+        /* 購読フォームセクションの幅 */
+        width: 100%;
+        /* 購読フォームセクションの文字の大きさ */
+        font-size: 2rem;
+        /* 購読フォームセクションの文字の色 */
+        color: #000;
+        /* 購読フォームセクションの文字の太さ */
+        font-weight: 400;
+        /* 購読フォームセクションの文字のフォント */
+        font-family: 'Playfair Display', serif;
+        /* 購読フォームセクションの文字の行間 */
+        line-height: 1.35em;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .subscribe-form {
+        /* 購読フォームセクションの背景色 */
+        background-color: #171717;
+        /* 購読フォームセクションの高さ */
+        height: 10vh;
+        /* 購読フォームセクションの幅 */
+        width: 100%;
+        /* 購読フォームセクションの位置を中央に */
+        margin: 0 auto;
+        /* 購読フォームセクションの文字の位置を中央に */
+        text-align: center;
+        /* 購読フォームセクションの文字の大きさ */
+        font-size: 2rem;
+        /* 購読フォームセクションの文字の色 */
+        color: #d6ff4e;
+        /* 購読フォームセクションの文字の太さ */
+        font-weight: 400;
+        /* 購読フォームセクションの文字のフォント */
+        font-family: 'Playfair Display', serif;
+        /* 購読フォームセクションの文字の行間 */
+        line-height: 1.35em;
+        /* 購読フォームセクションの文字の上下の余白 */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 4rem 0 8rem 0;
+    }
+
+    .subscribe-form input[type="text"] {
+        /* フォームの文字の大きさ */
+        font-size: 1rem;
+        /* フォームの文字の色 */
+        color: #000;
+        /* フォームの文字の太さ */
+        font-weight: 400;
+        /* フォームの文字のフォント */
+        font-family: 'Playfair Display', serif;
+        /* フォームの幅 */
+        width: 20rem;
+        /* フォームの高さ */
+        height: 2rem;
+        /* フォームの角を丸くする */
+        border-radius: 2rem;
+        /* フォームの枠線の色 */
+        border-color: #000;
+        /* フォームの枠線の太さ */
+        border-width: 1px;
+        /* フォームの枠線の種類 */
+        border-style: solid;
+        /* フォームの背景色 */
+        background-color: #d6ff4e;
+        padding: 1rem;
+    }
+
+    .subscribe-form input[type="submit"] {
+        /*type="submit"限定のリセットCSS*/
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        padding: 0;
+        border: none;
+        outline: none;
+        background: transparent;
+
+        /* ボタンの文字の大きさ */
+        font-size: 1rem;
+        /* ボタンの文字の色 */
+        color: #d6ff4e;
+        /* ボタンの文字の太さ */
+        font-weight: 400;
+        /* ボタンの文字のフォント */
+        font-family: 'Playfair Display', serif;
+        /* ボタンの文字の行間 */
+        line-height: 1.35em;
+        /* ボタンの幅 */
+        width: 5rem;
+        /* ボタンの高さ */
+        height: 2rem;
+        /* ボタンの角を丸くする */
+        border-radius: 2rem;
+        /* ボタンの背景色 */
+        background-color: #000;
+    }
+
+    /* フッター */
+
+    footer {
+        /* フッターの背景色 */
+        background-color: #171717;
+        /* フッターの文字の大きさ */
+        font-size: 1rem;
+        /* フッターの文字の色 */
+        color: #d6ff4e;
+    }
+
+    footer .line {
+        /* 線の色 */
+        background-color: #d6ff4e;
+        /* 線の太さ */
+        height: 1px;
+        /* 線の長さ */
+        width: 80%;
+        /* 線を垂直中央に配置 */
+        margin: 0 auto;
+    }
+
+    footer .line::before {
+        position: absolute;
+        display: block;
+        content: '';
+        height: 0.5rem;
+        width: 0.5rem;
+        border-radius: 50%;
+        background-color: #d6ff4e;
+        margin-top: -0.25rem;
+    }
+
+    footer .line::after {
+        position: absolute;
+        display: block;
+        content: '';
+        height: 0.5rem;
+        width: 0.5rem;
+        border-radius: 50%;
+        background-color: #d6ff4e;
+        margin-top: -0.25rem;
+        margin-left: 80%;
+    }
+
+    .footer-container {
+        display: flex;
+        flex-direction: column;
+        margin-top: 2rem;
+    }
+
+    .social-links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 4rem;
+    }
+
+    .social-links img {
+        max-width: 3rem;
+        min-width: 3rem;
+    }
+
+    .footer-text {
+        text-align: center;
+        padding: 2rem 0;
     }
 </style>
 
