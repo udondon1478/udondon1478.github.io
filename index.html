@@ -9,26 +9,26 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="assets\bxslider-4-4.2.12\bxslider-4-4.2.12\src\css\jquery.bxslider.css">
 
-<!-- jQuery library (served from Google) -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<!-- bxSlider Javascript file -->
-<script src="assets\bxslider-4-4.2.12\bxslider-4-4.2.12\dist\jquery.bxslider.min.js"></script>
-<!-- bxSlider CSS file -->
-<link href="assets\bxslider-4-4.2.12\bxslider-4-4.2.12\src\css\jquery.bxslider.css" rel="stylesheet" />
+    <!-- jQuery library (served from Google) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- bxSlider Javascript file -->
+    <script src="assets\bxslider-4-4.2.12\bxslider-4-4.2.12\dist\jquery.bxslider.min.js"></script>
+    <!-- bxSlider CSS file -->
+    <link href="assets\bxslider-4-4.2.12\bxslider-4-4.2.12\src\css\jquery.bxslider.css" rel="stylesheet" />
 
-<!-- bxsliderのscript -->
-<script>
-    $(document).ready(function(){
-  $('.bxslider').bxSlider({
-    easing: 'ease-in-out',
-    captions: true,
-    auto: true,
-    controls: false,
-    maxSlides: 3,
-    minSlides: 2,
-  });
-});
-</script>
+    <!-- bxsliderのscript -->
+    <script>
+        $(document).ready(function () {
+            $('.bxslider').bxSlider({
+                easing: 'ease-in-out',
+                captions: true,
+                auto: true,
+                controls: false,
+                maxSlides: 3,
+                minSlides: 2,
+            });
+        });
+    </script>
     <!-- // JavaScriptの記述終了 -->
 
     <!--jQueryのインポート-->
@@ -90,21 +90,25 @@
             <div class="hero-images">
                 <ul class="bxslider">
 
-                    <li><img
-                            src="\assets\imgs\Default_image_that_seem_to_have_lofty_principles_that_imagine_0_7852b14a-5bb9-4b75-90e9-d467cbc87275_1.jpg"
+                    <li><img src="\assets\imgs\Default_image_that_seem_to_have_lofty_principles_that_imagine_0_7852b14a-5bb9-4b75-90e9-d467cbc87275_1.jpg"
                             title="月と少女" alt="hero-image1"></li>
-                    <li><img src="\assets\imgs\Absolute_Reality_v16_ocean_Scifi_realistic_realistic_textures_0.jpg" title="画像1"
-                            alt="hero-image2"></li>
-                    <li><img src="assets\imgs\Absolute_Reality_v16_space_Scifi_realistic_realistic_textures_0.jpg" title="画像2" alt="hero-image3"></li>
-                    <li><img
-                            src="assets\imgs\Default_mystical_fish_natural_highlights_bright_colours_realis_0_135ebd48-f381-4e9b-97f5-d6e4163e5bc9_1.jpg" title="画像3"
-                            alt="hero-image4"></li>
-                    <li><img src="assets\imgs\Leonardo_Diffusion_scifi_smartphone_natural_highlights_bright_0.jpg" title="画像4"
-                            alt="hero-image5"></li>
+                    <li><img src="\assets\imgs\Absolute_Reality_v16_ocean_Scifi_realistic_realistic_textures_0.jpg"
+                            title="画像1" alt="hero-image2"></li>
+                    <li><img src="assets\imgs\Absolute_Reality_v16_space_Scifi_realistic_realistic_textures_0.jpg"
+                            title="画像2" alt="hero-image3"></li>
+                    <li><img src="assets\imgs\Default_mystical_fish_natural_highlights_bright_colours_realis_0_135ebd48-f381-4e9b-97f5-d6e4163e5bc9_1.jpg"
+                            title="画像3" alt="hero-image4"></li>
+                    <li><img src="assets\imgs\Leonardo_Diffusion_scifi_smartphone_natural_highlights_bright_0.jpg"
+                            title="画像4" alt="hero-image5"></li>
                 </ul>
             </div>
-
         </hero>
+        <gallery>
+            <div class="image-container">
+                <img src="\assets\imgs\Default_image_that_seem_to_have_lofty_principles_that_imagine_0_b5e265c5-5558-43bd-a4b6-884f33a0055a_1.jpg" alt="Image 1" class="image-1">
+                <img src="/assets\imgs\Default_image_that_seem_to_have_lofty_principles_that_imagine_0_b5e265c5-5558-43bd-a4b6-884f33a0055a_1.jpg" alt="Image 2" class="image-2">
+            </div>
+        </gallery>
 
 
     </main>
@@ -112,7 +116,6 @@
 
 <!--style-->
 <style>
-
     .header-text {
         /* フォントの種類 */
         font-family: 'Playfair Display', serif;
