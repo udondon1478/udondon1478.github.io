@@ -7,25 +7,12 @@
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=BIZ+UDGothic&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets\bxslider-4-4.2.12\bxslider-4-4.2.12\src\css\jquery.bxslider.css">
 
-    <script>
-        $('#container').imagesLoaded(function () {
-            // images have loaded
-        });
-
-        // options
-        $('#container').imagesLoaded({
-            // options...
-        },
-            function () {
-                // images have loaded
-            }
-        );
-    </script>
-
-    <!-- imagesloaded -->
-    <script src="assets\js\unpkg.com_imagesloaded@5.0.0_imagesloaded.pkgd.min.js"></script>
+    <script src="assets\js\index.js"></script>
 
     <!-- jQuery library (served from Google) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -66,6 +53,18 @@
 </head>
 
 <body>
+    <!-- ローディング画面 -->
+    <div class="background">
+        <div id="cube">
+            <div class="side"></div>
+            <div class="side"></div>
+            <div class="side"></div>
+            <div class="side"></div>
+            <div class="side"></div>
+            <div class="side"></div>
+        </div>
+    </div>
+
     <!-- ヘッダー -->
     <header>
         <div class="SITE-HEADER">
@@ -86,17 +85,6 @@
                 </ul>
             </nav>
 
-            <!-- ハンバーガーメニュー -->
-            <div class="hamburger-menu">
-                <!-- ハンバーガーメニューの線 -->
-                <div class="hamburger__line hamburger__line--1"></div>
-                <div class="hamburger__line hamburger__line--2"></div>
-                <div class="hamburger__line hamburger__line--3"></div>
-            </div>
-        </div>
-        <script>
-            // ハンバーガーメニューをクリックしたときに、ナビゲーションを表示する
-        </script>
     </header>
     <main>
         <hero>
@@ -111,20 +99,16 @@
                     <li><img src="assets\imgs\Default_image_that_seem_to_have_lofty_principles_that_imagine_0_7852b14a-5bb9-4b75-90e9-d467cbc87275_1.jpg"
                             title="月と少女" alt="hero-image1"></li>
                     <li><img src="assets\imgs\Absolute_Reality_v16_ocean_Scifi_realistic_realistic_textures_0.jpg"
-                            title="画像1" alt="hero-image2"></li>
+                            title="アトランティスの秘宝" alt="hero-image2"></li>
                     <li><img src="assets\imgs\Absolute_Reality_v16_space_Scifi_realistic_realistic_textures_0.jpg"
-                            title="画像2" alt="hero-image3"></li>
+                            title="Moon Base" alt="hero-image3"></li>
                     <li><img src="assets\imgs\Default_mystical_fish_natural_highlights_bright_colours_realis_0_135ebd48-f381-4e9b-97f5-d6e4163e5bc9_1.jpg"
-                            title="画像3" alt="hero-image4"></li>
+                            title="Mystical Fish" alt="hero-image4"></li>
                     <li><img src="assets\imgs\Leonardo_Diffusion_scifi_smartphone_natural_highlights_bright_0.jpg"
-                            title="画像4" alt="hero-image5"></li>http://127.0.0.1:3002/index.html
+                            title="Sci-fi Smart Phone" alt="hero-image5"></li>
                 </ul>
             </div>
         </hero>
-        <gallery>
-            <!--画像を2行に配置し、画面の両端に矢印ボタンを配置、そのボタンがクリックされたら1列隣の画像を中心に持ってくる -->
-
-        </gallery>
         <contact>
             <div class="contact-container">
                 <div class="float-square">
@@ -185,6 +169,7 @@
                 </div>
         </footer>
     </main>
+
 </body>
 
 <!--style-->
@@ -194,6 +179,103 @@
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+    }
+
+    /* ローディング画面 */
+    .loaded {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .background {
+        width: 100vw;
+        height: 100vh;
+        background-color: #c4c4c4;
+        transition: all 1s;
+        display: flex;
+        position: fixed;
+        z-index: 999
+    }
+
+    #cube {
+        margin: auto;
+        font-size: 24px;
+        height: 1em;
+        width: 1em;
+        position: relative;
+        transform: rotatex(30deg) rotatey(45deg);
+        transform-style: preserve-3d;
+        animation: cube-spin 1.5s infinite ease-in-out alternate;
+    }
+
+    .side {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        transform-style: preserve-3d;
+    }
+
+    .side::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: currentcolor;
+        transform: translatez(0.5em);
+        animation: cube-explode 1.5s infinite ease-in-out;
+        opacity: 0.5;
+    }
+
+    .side:nth-child(1) {
+        transform: rotatey(90deg);
+    }
+
+    .side:nth-child(2) {
+        transform: rotatey(180deg);
+    }
+
+    .side:nth-child(3) {
+        transform: rotatey(270deg);
+    }
+
+    .side:nth-child(4) {
+        transform: rotatey(360deg);
+    }
+
+    .side:nth-child(5) {
+        transform: rotatex(90deg);
+    }
+
+    .side:nth-child(6) {
+        transform: rotatex(270deg);
+    }
+
+    @keyframes cube-spin {
+        0% {
+            transform: rotatex(30deg) rotatey(45deg);
+        }
+
+        100% {
+            transform: rotatex(30deg) rotatey(405deg);
+        }
+    }
+
+    @keyframes cube-explode {
+        0% {
+            transform: translatez(0.5em);
+        }
+
+        50% {
+            transform: translatez(0.75em);
+        }
+
+        100% {
+            transform: translatez(0.5em);
+        }
     }
 
     .SITE-HEADER {
@@ -260,6 +342,7 @@
 
     .hero-text p {
         /* ヒーローセクションの文章の大きさ */
+        font-family: 'BIZ UDGothic', sans-serif;
         font-size: 1rem;
     }
 
@@ -302,6 +385,9 @@
         /* コンタクトセクションの位置を中央に */
         margin: 0 auto;
         position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     /*
@@ -325,7 +411,7 @@
         /* float-squareの背景色 */
         background-color: #d6ff4e;
         /* float-squareの高さ */
-        height: 50%;
+        height: auto;
         /* float-squareの幅 */
         width: auto;
         min-width: 30%;
@@ -334,14 +420,9 @@
         margin: 0 auto;
 
         position: absolute;
-
-        top: 50%;
-
-        left: 50%;
-
-        transform: translate(-50%, -50%);
         /* float-squareの角を丸くする */
         border-radius: 2rem 2rem 2rem 2rem;
+        padding-bottom: 2rem;
     }
 
 
