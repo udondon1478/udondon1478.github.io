@@ -9,9 +9,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="assets\bxslider-4-4.2.12\bxslider-4-4.2.12\src\css\jquery.bxslider.css">
 
-    <!-- masonry -->
-    <script src="assets\js\unpkg.com_masonry-layout@4.2.2_dist_masonry.pkgd.min.js"></script>
-
     <script>
         $('#container').imagesLoaded(function () {
             // images have loaded
@@ -25,15 +22,6 @@
                 // images have loaded
             }
         );
-    </script>
-
-    <!-- 初期化 -->
-    <script>
-        $('.grid').masonry({
-            // options
-            itemSelector: '.grid-item',
-            columnWidth: 200
-        });
     </script>
 
     <!-- imagesloaded -->
@@ -64,7 +52,7 @@
     <!--jQueryのインポート-->
     <script src="js\code.jquery.com_jquery-3.7.0.min.js"></script>
 
-    <!-- bx-wrapperにホバーしたとき、フェードインするスクリプト -->
+    <!-- bx-wrapperにホバーしたとき、キャプションをフェードインするスクリプト -->
     <script>
         $(function () {
             $('.bx-wrapper').hover(function () {
@@ -249,7 +237,7 @@
     }
 
     .nav-bar li {
-        margin: 1rem 0.5rem;
+        margin: 1rem 1rem;
     }
 
     .nav-bar a {
@@ -389,6 +377,11 @@
         padding: 2rem;
     }
 
+    .contact-button a:hover {
+        background-color: #292929;
+        color: #96b23f;
+    }
+
     /* 購読フォームセクション */
     .subscribe-text {
         /* 購読フォームセクションの背景色 */
@@ -495,6 +488,12 @@
         border-radius: 2rem;
         /* ボタンの背景色 */
         background-color: #000;
+    }
+
+    .subscribe-form input[type="submit"]:hover {
+        background-color: #d6ff4e;
+        color: #000;
+        cursor: pointer;
     }
 
     /* フッター */
