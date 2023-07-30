@@ -1,0 +1,262 @@
+
+    /* リセットCSS */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+
+    .SITE-HEADER {
+        background-color: #d6ff4e;
+    }
+
+    .header-text {
+        /* フォントの種類 */
+        font-family: 'Playfair Display', serif;
+        /* フォントの太さ */
+        font-weight: 400;
+        /* フォントの大きさ */
+        font-size: 3rem;
+        text-align: left;
+        line-height: 1.35em;
+        margin-left: 7rem;
+    }
+
+    /* ヘッダーの文字の下に線を引く */
+    .horizontal-line1 {
+        /* 線の色 */
+        background-color: #000;
+        /* 線の太さ */
+        height: 1px;
+        /* 線の長さ */
+        width: 80%;
+        /* 線を垂直中央に配置 */
+        margin: 0 auto;
+    }
+
+    .nav-bar {
+        /* ナビゲーションの文字の大きさ */
+        font-size: 1rem;
+    }
+
+    /*リストを横並びにする*/
+    .nav-bar ul {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+    }
+
+    .nav-bar li {
+        margin: 1rem 0.5rem;
+    }
+
+    .nav-bar a {
+        /* ナビゲーションの文字の色 */
+        color: #000;
+        text-decoration: none;
+        font-family: 'BIZ UDGothic', sans-serif;
+    }
+
+    /* ヒーローセクション */
+    .hero-text {
+        /* header-textと同じフォント */
+        font-family: 'Playfair Display', serif;
+        font-size: 2rem;
+        font-weight: 400;
+        text-align: center;
+        color: #d6ff4e;
+        background-color: #101010;
+        padding: 2rem 0;
+    }
+
+    .hero-text p {
+        /* ヒーローセクションの文章の大きさ */
+        font-family: 'BIZ UDGothic', sans-serif;
+        font-size: 1rem;
+    }
+
+    .hero-images img {
+        width: auto;
+        height: auto;
+
+        max-height: 50vh;
+        /*画像の位置を中央に*/
+        margin: 0 auto;
+    }
+
+    .bxslider {
+        /*class="slider"の子要素divを指定*/
+        height: 100%;
+        /*高さ指定*/
+        text-align: center;
+        font-size: 24px;
+        background: #171717;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /*背景色*/
+    }
+
+    /* ギャラリーセクション */
+    .gallery {
+        /* ギャラリーセクションの背景色 */
+        background-color: #d6ff4e;
+    }
+
+    /* コンタクトセクション */
+    .contact-container {
+        /* コンタクトセクションの背景色 */
+        background-color: #171717;
+        /* コンタクトセクションの高さ */
+        height: 60vh;
+        /* コンタクトセクションの幅 */
+        width: 100%;
+        /* コンタクトセクションの位置を中央に */
+        margin: 0 auto;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /*
+    .float-square .lines {
+        display: flex;
+        flex-direction: row;
+        margin-top: 2rem;
+    }
+
+    .float-square .line {
+        background-color: #bde145;
+        height: 1px;
+        width: 20%;
+    }
+    */
+
+
+    .float-square {
+        display: flex;
+        flex-direction: column;
+        /* float-squareの背景色 */
+        background-color: #d6ff4e;
+        /* float-squareの高さ */
+        height: auto;
+        /* float-squareの幅 */
+        width: auto;
+        min-width: 30%;
+        max-width: 70%;
+        /* float-squareの位置をcontact-containerの中央に */
+        margin: 0 auto;
+
+        position: absolute;
+        /* float-squareの角を丸くする */
+        border-radius: 2rem 2rem 2rem 2rem;
+        padding-bottom: 2rem;
+    }
+
+
+    .contact-text {
+        text-align: center;
+        padding: 2rem 0;
+    }
+
+    .contact-button a {
+        /* ボタンの文字の色 */
+        color: #d6ff4e;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* ボタンの背景色 */
+        background-color: #000;
+        /* ボタンの文字の大きさ */
+        font-size: 1.5rem;
+        /* ボタンの幅 */
+        width: 15rem;
+        /* ボタンの高さ */
+        height: 5rem;
+
+        /* ボタンの角を丸くする */
+        border-radius: 2rem;
+        /* ボタンの文字の位置を中央に */
+        text-align: center;
+        /* ボタンの文字の位置を中央に */
+        line-height: 5rem;
+        /* ボタンの位置を中央に */
+        margin: 0 auto;
+        padding: 2rem;
+    }
+
+    .contact-button a:hover {
+        background-color: #292929;
+        color: #96b23f;
+    }
+
+    /* フッター */
+
+    footer {
+        /* フッターの背景色 */
+        background-color: #171717;
+        /* フッターの文字の大きさ */
+        font-size: 1rem;
+        /* フッターの文字の色 */
+        color: #d6ff4e;
+    }
+
+    footer .line {
+        /* 線の色 */
+        background-color: #d6ff4e;
+        /* 線の太さ */
+        height: 1px;
+        /* 線の長さ */
+        width: 80%;
+        /* 線を垂直中央に配置 */
+        margin: 0 auto;
+    }
+
+    footer .line::before {
+        position: absolute;
+        display: block;
+        content: '';
+        height: 0.5rem;
+        width: 0.5rem;
+        border-radius: 50%;
+        background-color: #d6ff4e;
+        margin-top: -0.25rem;
+    }
+
+    footer .line::after {
+        position: absolute;
+        display: block;
+        content: '';
+        height: 0.5rem;
+        width: 0.5rem;
+        border-radius: 50%;
+        background-color: #d6ff4e;
+        margin-top: -0.25rem;
+        margin-left: 80%;
+    }
+
+    .footer-container {
+        display: flex;
+        flex-direction: column;
+        margin-top: 2rem;
+    }
+
+    .social-links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 4rem;
+    }
+
+    .social-links img {
+        max-width: 3rem;
+        min-width: 3rem;
+    }
+
+    .footer-text {
+        text-align: center;
+        padding: 2rem 0;
+    }

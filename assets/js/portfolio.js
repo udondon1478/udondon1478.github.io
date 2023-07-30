@@ -5,7 +5,7 @@ $(document).ready(function () {
       percentPosition: true,
       masonry: {
         columnWidth: ".grid-sizer",
-        gutter: 30,
+        gutter: 20,
       },
     });
   });

@@ -1,0 +1,156 @@
+    /* リセットCSS */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+
+    .SITE-HEADER {
+        background-color: #d6ff4e;
+    }
+
+    .header-text {
+        /* フォントの種類 */
+        font-family: 'Playfair Display', serif;
+        /* フォントの太さ */
+        font-weight: 400;
+        /* フォントの大きさ */
+        font-size: 3rem;
+        text-align: left;
+        line-height: 1.35em;
+        margin-left: 7rem;
+    }
+
+    /* ヘッダーの文字の下に線を引く */
+    .horizontal-line1 {
+        /* 線の色 */
+        background-color: #000;
+        /* 線の太さ */
+        height: 1px;
+        /* 線の長さ */
+        width: 80%;
+        /* 線を垂直中央に配置 */
+        margin: 0 auto;
+    }
+
+    .nav-bar {
+        /* ナビゲーションの文字の大きさ */
+        font-size: 1rem;
+    }
+
+    /*リストを横並びにする*/
+    .nav-bar ul {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+    }
+
+    .nav-bar li {
+        margin: 1rem 0.5rem;
+    }
+
+    .nav-bar a {
+        /* ナビゲーションの文字の色 */
+        color: #000;
+        text-decoration: none;
+        font-family: 'BIZ UDGothic', sans-serif;
+    }
+
+
+    .background {
+        background-color: #171717;
+    }
+
+    /* Isotopeのスタイル */
+    .grid {
+        background-color: #171717;
+        padding: 5rem 0;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+
+    .grid-sizer,
+    .grid-item {
+        width: 32%;
+    }
+
+    .grid-item {
+        margin-bottom: 1rem;
+    }
+
+
+    .grid-item img {
+        width: 100%;
+    }
+
+
+
+    /* フッター */
+
+    footer {
+        /* フッターの背景色 */
+        background-color: #171717;
+        /* フッターの文字の大きさ */
+        font-size: 1rem;
+        /* フッターの文字の色 */
+        color: #d6ff4e;
+    }
+
+    footer .line {
+        /* 線の色 */
+        background-color: #d6ff4e;
+        /* 線の太さ */
+        height: 1px;
+        /* 線の長さ */
+        width: 80%;
+        /* 線を垂直中央に配置 */
+        margin: 0 auto;
+    }
+
+    footer .line::before {
+        position: absolute;
+        display: block;
+        content: '';
+        height: 0.5rem;
+        width: 0.5rem;
+        border-radius: 50%;
+        background-color: #d6ff4e;
+        margin-top: -0.25rem;
+    }
+
+    footer .line::after {
+        position: absolute;
+        display: block;
+        content: '';
+        height: 0.5rem;
+        width: 0.5rem;
+        border-radius: 50%;
+        background-color: #d6ff4e;
+        margin-top: -0.25rem;
+        margin-left: 80%;
+    }
+
+    .footer-container {
+        display: flex;
+        flex-direction: column;
+        margin-top: 2rem;
+    }
+
+    .social-links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 4rem;
+    }
+
+    .social-links img {
+        max-width: 3rem;
+        min-width: 3rem;
+    }
+
+    .footer-text {
+        text-align: center;
+        padding: 2rem 0;
+    }
