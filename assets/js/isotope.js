@@ -13,8 +13,9 @@ $(document).ready(function () {
 
 $(document).ready(function () {
   $grid = $(".grid").imagesLoaded(function () {
-    lightGallery(document.getElementsByClassName("grid-sizer"), {
-      thumbnail: true,
+    lightGallery(document.getElementById("lightgallery"), {
+      plugins: [lgZoom, lgThumbnail],
+      speed: 500,
     });
   });
 });
