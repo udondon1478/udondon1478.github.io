@@ -84,6 +84,7 @@
                     alt="">
             </div>
         </div>
+
     </div>
 
     <footer>
@@ -111,8 +112,9 @@
             $grid = $(".grid").imagesLoaded(function () {
                 $grid.isotope({
                     itemSelector: ".grid-item",
+                    percentPosition: true,
                     masonry: {
-                        columnWidth: 200,
+                        columnWidth: '.grid-sizer'
                     }
                 });
             });
@@ -180,13 +182,12 @@
 
     /* Isotopeのスタイル */
     .grid {
-        /*grid-itemを中央に配置*/
-        display: flex;
-        justify-content: center;
+        background-color: #171717;
     }
 
+    .grid-sizer,
     .grid-item {
-        width: 40rem;
+        width: 20%;
     }
 
     .grid-item img {
