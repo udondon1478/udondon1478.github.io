@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+
+<body>
+    <!-- ヘッダー -->
+    <header>
+        <div class="SITE-HEADER">
+            <!-- クラス名がheader-textのh1タグ -->
+            <!--フォントは"Playfair Display"の400-->
+            <h1 class="header-text">Portfolio<br>Site</h1>
+
+            <div class="horizontal-line1">
+            </div>
+
+            <!-- ナビゲーション -->
+            <nav class="nav-bar">
+                <ul>
+                    <li><a href="index.html">ホーム</a></li>
+                    <li><a href="about.html">概要</a></li>
+                    <li><a href="contact.html">お問い合わせ</a></li>
+                    <li><a href="portfolio.html">ポートフォリオ</a></li>
+                </ul>
+            </nav>
+    </header>
+    <hero>
+        <div class="profile-container">
+            <div class="about">
+                <h1>Ando Yu</h1>
+                <p>
+                    3DCG | Unity | DJ | VJ | XR
+                </p>
+
+                <p>
+                    ◆Blenderを用いた3DCG制作、Unityを用いたゲーム制作、<br>趣味でDJ、VJを行っています。<br>
+                    また、VRの空間制作等も行っています。<br>
+                    <br>
+
+                    ◆現在大学でメディア情報を専攻しています。<br>3DCGだけでなく、映像、プログラミング、<br>フロントエンド開発等も学んでおり、多様なアイデアを実現可能です。<br>
+                    <br>
+
+                    ◆お問い合わせ等ございましたら、<br>TwitterのDM、もしくはお問い合わせフォームからご連絡ください。
+                </p>
+
+                <a href="contact.html">お問い合わせ</a>
+            </div>
+            <div class="main-image">
+                <img src="assets\imgs\Absolute_Reality_v16_Garden_Scifi_realistic_realistic_textures_0.jpg"
+                    alt="main-image">
+            </div>
+        </div>
+    </hero>
+    <main>
+        <div class="my-timeline">
+            <div class="picture">
+                <img src="assets\imgs\udon_high+_reso_remove_bg.png" alt="udon">
+            </div>
+            <div class="text">
+                <h1>私の経歴</h1>
+        </div>
+        <div class="timeline-container">
+            <div class="timeline">
+                <div class="line"></div>
+
+                <div class="section">
+                    <div class="bead"></div>
+                    <div class="content">
+                        <h2>海中アニメーション</h2>
+                        <img src="assets\imgs\fish.png" alt="fish">
+                        <p>
+                            Mayaを用いて作成した1分程度のアニメーション
+                        </p>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="bead"></div>
+                    <div class="content">
+                        <h2>Sakekuzu Night</h2>
+                        <img src="assets\imgs\230701.jpg" alt="SN Vol.?">
+                        <p>
+                            イベント説明
+                        </p>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="bead"></div>
+                    <div class="content">
+                        <h2>トーキョーゲームショー2022</h2>
+                        <img src="assets\imgs\TGS2022.jpg" alt="TGS2022">
+                        <p>
+                            トーキョーゲームショー2022に作成したゲームを出展しました
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script></script>
+    </main>
+
+    <footer>
+        <div class="line"></div>
+        <!--mixcloudとtwitterのリンクを配置-->
+        <div class="footer-container">
+            <div class="social-links">
+                <div class="mixcloud">
+                    <a href="https://www.mixcloud.com/udondon1478/" target="_blank"><img src="assets\imgs\faviconV2.png"
+                            alt="mixcloud"></a>
+                </div>
+                <div class="twitter">
+                    <a href="https://twitter.com/udondon1478VRC" target="_blank"><img
+                            src="assets\imgs\2021 Twitter logo - blue.png" alt="twitter"></a>
+                </div>
+            </div>
+            <div class="footer-text">
+                <p>© 2023 udondon1478</p>
+            </div>
+    </footer>
+    </main>
+</body>
+
+<!--style-->
+<style>
+    /* リセットCSS */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .SITE-HEADER {
+        background-color: #d6ff4e;
+    }
+
+    .header-text {
+        /* フォントの種類 */
+        font-family: 'Playfair Display', serif;
+        /* フォントの太さ */
+        font-weight: 400;
+        /* フォントの大きさ */
+        font-size: 3rem;
+        text-align: left;
+        line-height: 1.35em;
+        margin-left: 8rem;
+    }
+
+    /* ヘッダーの文字の下に線を引く */
+    .horizontal-line1 {
+        /* 線の色 */
+        background-color: #000;
+        /* 線の太さ */
+        height: 1px;
+        /* 線の長さ */
+        width: 80%;
+        /* 線を垂直中央に配置 */
+        margin: 0 auto;
+    }
+
+    .nav-bar {
+        /* ナビゲーションの文字の大きさ */
+        font-size: 1rem;
+    }
+
+    /*リストを横並びにする*/
+    .nav-bar ul {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+    }
+
+    .nav-bar li {
+        margin: 1rem 0.5rem;
+    }
+
+    .nav-bar a {
+        /* ナビゲーションの文字の色 */
+        color: #000;
+        text-decoration: none;
+    }
+
+    /* ヒーロー */
+    .profile-container {
+        /* ヒーローの背景色 */
+        background-color: #171717;
+        /* ヒーローの文字の大きさ */
+        font-size: 1rem;
+        position: relative;
+        height: 80vh;
+        width: 100%;
+    }
+
+    .about {
+        /* フォントの種類 */
+        font-family: 'Playfair Display', serif;
+        /* フォントの太さ */
+        font-weight: 400;
+        /* フォントの大きさ */
+        font-size: 1.5rem;
+        text-align: center;
+        line-height: 1.5;
+        color: #000;
+        background-color: #d6ff4e;
+        position: absolute;
+        left: 20%;
+        top: 18%;
+        border-radius: 1rem;
+        z-index: 2;
+    }
+
+    .about p {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+    .main-image {
+        position: absolute;
+        left: 40%;
+        top: 12.5%;
+    }
+
+    .main-image img {
+        width: 40%;
+        aspect-ratio: 14/15;
+        border-radius: 1rem;
+    }
+
+    .about a {
+        display: block;
+        width: 10rem;
+        height: 3rem;
+        line-height: 3rem;
+        background-color: #000;
+        color: #d6ff4e;
+        text-decoration: none;
+        border-radius: 1rem;
+        margin: 1rem auto;
+    }
+
+    .about a:hover {
+        background-color: #292929;
+        color: #96b23f;
+    }
+    /* メイン */
+
+    .my-timeline {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #171717;
+    }
+
+    .picture {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .picture img{
+        width: 20%;
+        height: auto;
+    }
+
+    .my-timeline h1 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        color: #c4c4c4;
+    }
+
+    .timeline-container {
+        padding: 2rem;
+        padding-bottom: 2rem;
+        margin: 0 auto;
+        max-width: 800px;
+    }
+
+    .timeline {
+        position: relative;
+        min-height: 150px;
+    }
+
+    .timeline .line {
+        position: absolute;
+        z-index: 2;
+        left: calc(50% - 1px);
+        width: 2px;
+        top: -50px;
+        bottom: -50px;
+        background-color: #ff0000;
+        display: none;
+    }
+
+    .timeline .line::before,
+    .timeline .line::after {
+        position: absolute;
+        display: block;
+        content: '';
+        height: 1rem;
+        width: 1rem;
+        border-radius: 50%;
+        background-color: #ff0000;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .timeline .line::after {
+        bottom: 0;
+    }
+
+    .section {
+        display: flex;
+        opacity: 0;
+        transform: translateX(-100%);
+        transition: 600ms ease;
+        position: relative;
+        z-index: 1;
+        margin: 50px 0;
+        padding: 1rem;
+        border-radius: 1rem;
+        align-items: center;
+        min-height: 300px;
+    }
+
+    .section:nth-child(odd) {
+        flex-direction: row-reverse;
+        transform: translateX(100%);
+    }
+
+    .bead{
+        position: absolute;
+        display: block;
+        height: 1rem;
+        width: 1rem;
+        border-radius: 50%;
+        background-color: #ff0000;
+        left: 50%;
+        top: 20%;
+        transform: translateX(-50%);
+    }
+
+    .content{
+        width: calc(50% - 2rem);
+    }
+
+    .show-me:nth-child(n){
+        transform: none;
+        opacity: 1;
+    }
+
+    .timeline h1{
+        letter-spacing: 1rem;
+    }
+
+    /* フッター */
+
+    footer {
+        /* フッターの背景色 */
+        background-color: #171717;
+        /* フッターの文字の大きさ */
+        font-size: 1rem;
+        /* フッターの文字の色 */
+        color: #d6ff4e;
+    }
+
+    footer .line {
+        /* 線の色 */
+        background-color: #d6ff4e;
+        /* 線の太さ */
+        height: 1px;
+        /* 線の長さ */
+        width: 80%;
+        /* 線を垂直中央に配置 */
+        margin: 0 auto;
+    }
+
+    footer .line::before {
+        position: absolute;
+        display: block;
+        content: '';
+        height: 0.5rem;
+        width: 0.5rem;
+        border-radius: 50%;
+        background-color: #d6ff4e;
+        margin-top: -0.25rem;
+    }
+
+    footer .line::after {
+        position: absolute;
+        display: block;
+        content: '';
+        height: 0.5rem;
+        width: 0.5rem;
+        border-radius: 50%;
+        background-color: #d6ff4e;
+        margin-top: -0.25rem;
+        margin-left: 80%;
+    }
+
+    .footer-container {
+        display: flex;
+        flex-direction: column;
+        margin-top: 2rem;
+    }
+
+    .social-links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 4rem;
+    }
+
+    .social-links img {
+        max-width: 3rem;
+        min-width: 3rem;
+    }
+
+    .footer-text {
+        text-align: center;
+        padding: 2rem 0;
+    }
+</style>
+
+</html>
