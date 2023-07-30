@@ -14,7 +14,7 @@ $(document).ready(function () {
 $(document).ready(function () {
   $grid = $(".grid").imagesLoaded(function () {
     lightGallery(document.getElementById("lightgallery"), {
-      plugins: [lgZoom, lgThumbnail],
+      plugins: [lgZoom, lgThumbnail, lgVideo],
       speed: 500,
     });
   });
