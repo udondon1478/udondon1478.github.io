@@ -34,9 +34,9 @@
         <div class="profile-container">
             <div class="about">
                 <h1>Ando Yu</h1>
-                <p>
+                <h2>
                     3DCG | Unity | DJ | VJ | XR
-                </p>
+                </h2>
 
                 <p>
                     ◆Blenderを用いた3DCG制作、Unityを用いたゲーム制作、<br>趣味でDJ、VJを行っています。<br>
@@ -51,10 +51,12 @@
 
                 <a href="contact.html">お問い合わせ</a>
             </div>
+            <!-- 視線の動きを考えるとタイムラインとずれが生じて見づらいので、一旦コメントアウト、後で考える
             <div class="main-image">
                 <img src="assets\imgs\Absolute_Reality_v16_Garden_Scifi_realistic_realistic_textures_0.jpg"
                     alt="main-image">
             </div>
+        -->
         </div>
     </hero>
     <main>
@@ -103,7 +105,7 @@
                 </div>
             </div>
         </div>
-        <script></script>
+        <script src="assets\js\timeline.js"></script>
     </main>
 
     <footer>
@@ -195,6 +197,9 @@
         position: relative;
         height: 80vh;
         width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .about {
@@ -208,11 +213,19 @@
         line-height: 1.5;
         color: #000;
         background-color: #d6ff4e;
+        /* main-imageを使用する場合ここを使う
         position: absolute;
         left: 20%;
         top: 18%;
+        */
         border-radius: 1rem;
         z-index: 2;
+        margin: 2rem;
+    }
+
+    .about h2 {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
     }
 
     .about p {
@@ -220,6 +233,7 @@
         line-height: 1.5;
     }
 
+    /*
     .main-image {
         position: absolute;
         left: 40%;
@@ -231,6 +245,7 @@
         aspect-ratio: 14/15;
         border-radius: 1rem;
     }
+    */
 
     .about a {
         display: block;
@@ -285,7 +300,7 @@
 
     .timeline {
         position: relative;
-        min-height: 150px;
+        min-height: 20rem;
     }
 
     .timeline .line {
@@ -293,9 +308,9 @@
         z-index: 2;
         left: calc(50% - 1px);
         width: 2px;
-        top: -50px;
-        bottom: -50px;
-        background-color: #ff0000;
+        top: -3rem;
+        bottom: -3rem;
+        background-color: #d6ff4e;
         display: none;
     }
 
@@ -307,7 +322,7 @@
         height: 1rem;
         width: 1rem;
         border-radius: 50%;
-        background-color: #ff0000;
+        background-color: #d6ff4e;
         left: 50%;
         transform: translateX(-50%);
     }
@@ -323,11 +338,17 @@
         transition: 600ms ease;
         position: relative;
         z-index: 1;
-        margin: 50px 0;
+        margin: 3rem 0;
         padding: 1rem;
         border-radius: 1rem;
         align-items: center;
         min-height: 300px;
+        color: #c4c4c4;
+    }
+
+    .section img{
+        max-width: 100%;
+
     }
 
     .section:nth-child(odd) {
@@ -341,7 +362,7 @@
         height: 1rem;
         width: 1rem;
         border-radius: 50%;
-        background-color: #ff0000;
+        background-color: #d6ff4e;
         left: 50%;
         top: 20%;
         transform: translateX(-50%);
