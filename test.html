@@ -7,6 +7,9 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
     <script src="assets\js\unpkg.com_imagesloaded@5.0.0_imagesloaded.pkgd.min.js"></script>
+    
+    <link type="text/css" rel="stylesheet" href="assets\css\lightgallery-bundle.css" />
+
 </head>
 
 <body>
@@ -32,58 +35,67 @@
     </header>
 
     <!-- Isotope container -->
-    <div class="grid">
-        <div class="grid-sizer">
-            <!-- Isotope items -->
-            <div class="grid-item">
-                <img src="assets\imgs\Absolute_Reality_v16_ocean_Scifi_realistic_realistic_textures_0.jpg" alt="">
+    <button type="button" class="button is-checked" data-filter="">ALL</button>
+    <button type="button" class="button" data-filter=".design">DESIGN</button>
+    <button type="button" class="button" data-filter=".branding">BRANDING</button>
+
+    <div class="nak-gallery nlg1" id="gallery">
+        <a href="http://unsplash.com/photos/GYNxcQvBNzA/download" class="revGallery-anchor design">
+            <img class="img-responsive" src="http://unsplash.com/photos/GYNxcQvBNzA/download">
+            <div style="overflow:hidden">
+                <div class="nak-gallery-poster"
+                    style="background-image:url('http://unsplash.com/photos/GYNxcQvBNzA/download');background-size:cover;background-repeat:no-repeat;background-position:center center;display: block;width: 100%;height: 0;">
+                </div>
             </div>
-            <div class="grid-item">
-                <img src="assets\imgs\Absolute_Reality_v16_space_Scifi_realistic_realistic_textures_0.jpg" alt="">
+            <div class="gal-overlay">
+                <div class="photo"></div>
             </div>
-            <div class="grid-item">
-                <img src="assets\imgs\Absolute_Reality_v16_terrain_3D_Render_Scifi_realistic_realist_0 (1).jpg" alt="">
+        </a>
+        <a href="https://www.youtube.com/watch?v=Io0fBr1XBUA" class="revGallery-anchor branding">
+            <img class="img-responsive" src="http://unsplash.com/photos/ssAcdlJRsI4/download">
+            <div style="overflow:hidden">
+                <div class="nak-gallery-poster"
+                    style="background-image:url('http://unsplash.com/photos/ssAcdlJRsI4/download');background-size:cover;background-repeat:no-repeat;background-position:center center;display: block;width: 100%;height: 0;">
+                </div>
             </div>
-            <div class="grid-item">
-                <img src="assets\imgs\Absolute_Reality_v16_space_Scifi_realistic_realistic_textures_1.jpg" alt="">
+            <div class="gal-overlay">
+                <div class="photo"></div>
             </div>
-            <div class="grid-item">
-                <img src="assets\imgs\Default_image_that_seem_to_have_lofty_principles_that_imagine_0_7852b14a-5bb9-4b75-90e9-d467cbc87275_1.jpg"
-                    alt="">
+        </a>
+        <a href="http://unsplash.com/photos/EKIyHUrUHWU/download" class="revGallery-anchor design">
+            <img class="img-responsive" src="http://unsplash.com/photos/EKIyHUrUHWU/download">
+            <div style="overflow:hidden">
+                <div class="nak-gallery-poster"
+                    style="background-image:url('http://unsplash.com/photos/EKIyHUrUHWU/download');background-size:cover;background-repeat:no-repeat;background-position:center center;display: block;width: 100%;height: 0;">
+                </div>
             </div>
-            <div class="grid-item">
-                <img src="assets\imgs\Absolute_Reality_v16_ocean_Scifi_realistic_realistic_textures_0.jpg" alt="">
+            <div class="gal-overlay">
+                <div class="photo"></div>
             </div>
-            <div class="grid-item">
-                <img src="assets\imgs\Absolute_Reality_v16_space_Scifi_realistic_realistic_textures_0.jpg" alt="">
+        </a>
+        <a href="http://unsplash.com/photos/CFi7_hCXecU/download" class="revGallery-anchor branding">
+            <img class="img-responsive" src="http://unsplash.com/photos/CFi7_hCXecU/download">
+            <div style="overflow:hidden">
+                <div class="nak-gallery-poster"
+                    style="background-image:url('http://unsplash.com/photos/CFi7_hCXecU/download');background-size:cover;background-repeat:no-repeat;background-position:center center;display: block;width: 100%;height: 0;">
+                </div>
             </div>
-            <div class="grid-item">
-                <img src="assets\imgs\Absolute_Reality_v16_terrain_3D_Render_Scifi_realistic_realist_0 (1).jpg" alt="">
+            <div class="gal-overlay">
+                <div class="photo"></div>
             </div>
-            <div class="grid-item">
-                <img src="assets\imgs\Absolute_Reality_v16_space_Scifi_realistic_realistic_textures_1.jpg" alt="">
+        </a>
+        <a href="http://unsplash.com/photos/cFplR9ZGnAk/download" class="revGallery-anchor design">
+            <img class="img-responsive" src="http://unsplash.com/photos/cFplR9ZGnAk/download">
+            <div style="overflow:hidden">
+                <div class="nak-gallery-poster"
+                    style="background-image:url('http://unsplash.com/photos/cFplR9ZGnAk/download');background-size:cover;background-repeat:no-repeat;background-position:center center;display: block;width: 100%;height: 0;">
+                </div>
             </div>
-            <div class="grid-item">
-                <img src="assets\imgs\Default_image_that_seem_to_have_lofty_principles_that_imagine_0_7852b14a-5bb9-4b75-90e9-d467cbc87275_1.jpg"
-                    alt="">
+            <div class="gal-overlay">
+                <div class="photo"></div>
             </div>
-            <div class="grid-item">
-                <img src="assets\imgs\Absolute_Reality_v16_ocean_Scifi_realistic_realistic_textures_0.jpg" alt="">
-            </div>
-            <div class="grid-item">
-                <img src="assets\imgs\Absolute_Reality_v16_space_Scifi_realistic_realistic_textures_0.jpg" alt="">
-            </div>
-            <div class="grid-item">
-                <img src="assets\imgs\Absolute_Reality_v16_terrain_3D_Render_Scifi_realistic_realist_0 (1).jpg" alt="">
-            </div>
-            <div class="grid-item">
-                <img src="assets\imgs\Absolute_Reality_v16_space_Scifi_realistic_realistic_textures_1.jpg" alt="">
-            </div>
-            <div class="grid-item">
-                <img src="assets\imgs\Default_image_that_seem_to_have_lofty_principles_that_imagine_0_7852b14a-5bb9-4b75-90e9-d467cbc87275_1.jpg"
-                    alt="">
-            </div>
-        </div>
+        </a>
+    </div>
     </div>
 
     <footer>
@@ -105,19 +117,11 @@
             </div>
     </footer>
 
-    <!-- imagesloaded -->
-    <script>
-        $(document).ready(function () {
-            $grid = $(".grid").imagesLoaded(function () {
-                $grid.isotope({
-                    itemSelector: ".grid-item",
-                    masonry: {
-                        columnWidth: 200,
-                    }
-                });
-            });
-        });
-    </script>
+    <script src="assets\js\lightgallery.umd.js"></script>
+    <script src="assets\js\lg-thumbnail.umd.js"></script>
+    <script src="assets\js\lg-zoom.umd.js"></script>
+    <script src="assets\js\test.js"></script>
+
 </body>
 
 <style>
@@ -179,19 +183,143 @@
     }
 
     /* Isotopeのスタイル */
-    .grid {
-        /*grid-itemを中央に配置*/
-        display: flex;
-        justify-content: center;
-    }
+    .revGallery-anchor, .gal-overlay, .nak-gallery-poster{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
 
-    .grid-item {
-        width: 40rem;
-    }
 
-    .grid-item img {
-        width: 100%;
-    }
+.revGallery-anchor{
+  overflow: hidden;
+  position: relative;
+  width: calc(100% / 5);
+  display: block;
+  float: left;
+  border: 5px solid #e9e9e9;
+}
+
+.gal-overlay{
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: rgba(27,27,27, 0.6);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: background .4s ease;
+  -webkit-transition: background .4s ease;
+}
+		
+.revGallery-anchor:hover .gal-overlay{
+  background: rgba(27,27,27, 0);
+}
+
+.nak-gallery {
+  display: block;
+  width: 100%;
+  position: relative;
+  margin-top: 30px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.nak-gallery-poster{
+  padding-bottom:100%;
+  transform-origin: 50% 50%;
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform: scale(1, 1);
+  -webkit-transform: scale(1, 1);
+  -ms-transform: scale(1, 1);
+  transition: all .4s ease;
+  -webkit-transition: all .4s ease;
+}
+
+.revGallery-anchor:hover .nak-gallery-poster{
+  transform: scale(1.1, 1.1);
+  -webkit-transform: scale(1.1, 1.1);
+  -ms-transform: scale(1.1, 1.1);
+}
+
+.img-responsive{
+  display:none;
+}
+
+.button{
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  -webkit-transition: all .4s ease;
+  -moz-transition: all .4s ease;
+  -o-transition: all .4s ease;
+  transition: all .4s ease;
+  width: 200px;
+  height: 48px;
+  border: 1px solid rgba(0,169,157,1);
+  background-color: rgba(0,169,157,1);
+  border-radius: 2px;
+  color: #fff;
+  letter-spacing: 2px;
+}
+
+.button:hover {
+  background-color: #363636;
+  text-shadow: 0 1px hsla(0, 0%, 100%, 0.5);
+  color: #fff;
+}
+
+.button:active,
+.button.is-checked {
+  background-color: #28F;
+}
+
+.button.is-checked {
+  color: white;
+  text-shadow: 0 -1px hsla(0, 0%, 0%, 0.8);
+}
+
+.button:active {
+  box-shadow: inset 0 1px 10px hsla(0, 0%, 0%, 0.8);
+}
+
+
+.revGallery-anchor-width1{
+  width: 40%
+}
+
+.revGallery-anchor-width2{
+  width: 30%
+}
+
+.revGallery-anchor-width3{
+  width: 20%
+}
+
+.nak-gallery-height1{
+  padding-bottom: 400px
+}
+
+.nak-gallery-height2{
+  padding-bottom: 300px
+}
+
+.nak-gallery-height3{
+  padding-bottom: 200px
+}
+
+.preloader{
+  display: none;
+}
+
+.preloaderStyle{
+  background: red;
+  width: 100%;
+  height: 100px;
+}
 
     /* フッター */
 

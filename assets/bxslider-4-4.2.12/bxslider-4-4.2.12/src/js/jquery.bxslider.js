@@ -193,7 +193,7 @@
 
       // wrap el in a wrapper
       el.wrap('<div class="' + slider.settings.wrapperClass + '"><div class="bx-viewport"></div></div>');
-      // store a namespace reference to .bx-viewport
+      // store a namespace reference to viewport
       slider.viewport = el.parent();
 
       // add aria-live if the setting is enabled and ticker mode is disabled
