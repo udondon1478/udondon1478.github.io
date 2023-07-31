@@ -221,6 +221,10 @@
 
     }
 
+    .section video {
+        max-width: 100%;
+    }
+
     .section:nth-child(odd) {
         flex-direction: row-reverse;
         transform: translateX(100%);
