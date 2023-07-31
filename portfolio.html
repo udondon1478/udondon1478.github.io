@@ -21,6 +21,9 @@
 <body>
     <!-- ヘッダー -->
     <header>
+        <div class="loading">
+            <span class="circle"></span>
+        </div>
         <div class="SITE-HEADER">
             <!-- クラス名がheader-textのh1タグ -->
             <!--フォントは"Playfair Display"の400-->
@@ -47,17 +50,16 @@
                 <!-- Isotope items -->
                 <div id="lightgallery">
 
-                    <a class="grid-item"
-                        href="https://youtu.be/_Smu3a2KDdY?t=11"
+                    <a class="grid-item" href="https://youtu.be/_Smu3a2KDdY?t=11"
                         data-sub-html="<h3>FRIDAY &quot;HOUSE&quot; Vol.2</h3><p></p>">
                         <img src="assets\imgs\AM02-16.png">
                     </a>
 
 
-                    <a class="grid-item"
-                        href="https://youtu.be/jGhm9toHtw8"
+                    <a class="grid-item" href="https://youtu.be/jGhm9toHtw8"
                         data-sub-html="<h3>Maya アニメーション</h3><p>水中の魚たちを描いた1分程度のアニメーションです</p>">
-                        <img src="assets\imgs\Default_mystical_fish_natural_highlights_bright_colours_realis_0_135ebd48-f381-4e9b-97f5-d6e4163e5bc9_1.jpg">
+                        <img
+                            src="assets\imgs\Default_mystical_fish_natural_highlights_bright_colours_realis_0_135ebd48-f381-4e9b-97f5-d6e4163e5bc9_1.jpg">
                     </a>
 
 
@@ -70,7 +72,7 @@
 
                     <a class="grid-item"
                         href="assets\imgs\Absolute_Reality_v16_ocean_Scifi_realistic_realistic_textures_0.jpg"
-                        data-sub-html="<h3>アトランティスの秘宝 - 2023-07-13 </h3><p>Maya C4D</p>"> 
+                        data-sub-html="<h3>アトランティスの秘宝 - 2023-07-13 </h3><p>Maya C4D</p>">
                         <img src="assets\imgs\Absolute_Reality_v16_ocean_Scifi_realistic_realistic_textures_0.jpg">
                     </a>
 
@@ -83,8 +85,7 @@
                     </a>
 
 
-                    <a class="grid-item"
-                        href="https://youtu.be/_Smu3a2KDdY"
+                    <a class="grid-item" href="https://youtu.be/_Smu3a2KDdY"
                         data-sub-html="<h3>Sakekuzu Night Vol.13 2023-06-03</h3><p>in real cam</p>">
                         <img src="assets\imgs\house jarsey.png">
                     </a>
@@ -185,10 +186,57 @@
         <script src="assets\js\lg-fullscreen.umd.js"></script>
         <script src="assets\js\lg-video.umd.js"></script>
 
+        <script>const loading = document.querySelector('.loading');
+
+            window.addEventListener('load', () => {
+                loading.classList.add('hide');
+            }, false);</script>
 </body>
 
 <style>
+    body {
+        margin: 0;
+        padding: 0;
+    }
 
+    .loading {
+        position: fixed;
+        z-index: 1000;
+        width: 100%;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        background: #fdfdfd;
+    }
+
+    .loading.hide {
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 500ms;
+    }
+
+    .loading .circle {
+        display: block;
+        position: relative;
+        top: calc(50% - 20px);
+        width: 40px;
+        height: 40px;
+        margin: 0 auto;
+        border: 8px solid #e0e0e0;
+        border-top: 7px solid #ffcccc;
+        border-radius: 50px;
+        animation: loading 700ms linear 0ms infinite normal both;
+    }
+
+    @keyframes loading {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
 </style>
 
 </html>
