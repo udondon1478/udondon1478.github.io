@@ -1,13 +1,24 @@
 $(document).ready(function () {
   $grid = $(".grid").imagesLoaded(function () {
-    $grid.isotope({
-      itemSelector: ".grid-item",
-      percentPosition: true,
-      masonry: {
-        columnWidth: ".grid-sizer",
-        gutter: 20,
-      },
-    });
+    if (window.matchMedia("(max-width: 767px)").matches) {
+      $grid.isotope({
+        itemSelector: ".grid-item",
+        percentPosition: true,
+        masonry: {
+          columnWidth: '.grid-sizer',
+          gutter: 0,
+        },
+      });
+    } else {
+      $grid.isotope({
+        itemSelector: ".grid-item",
+        percentPosition: true,
+        masonry: {
+          columnWidth: ".grid-sizer",
+          gutter: 20,
+        },
+      });
+    }
   });
 });
 
