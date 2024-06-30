@@ -77,7 +77,8 @@
     }
 
     .nav-bar li {
-        margin: 1rem 1rem;
+        margin: 2rem 1.5rem;
+        
     }
 
     .nav-bar a {
@@ -181,7 +182,7 @@
         position: absolute;
         /* float-squareの角を丸くする */
         border-radius: 2rem 2rem 2rem 2rem;
-        padding-bottom: 2rem;
+        padding: 0 2rem 2rem 2rem;
     }
 
 
@@ -190,7 +191,13 @@
         padding: 2rem 0;
     }
 
-    .contact-button a {
+    .more{
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    .about-button a {
         /* ボタンの文字の色 */
         color: #d6ff4e;
         text-decoration: none;
@@ -217,7 +224,39 @@
         padding: 2rem;
     }
 
-    .contact-button a:hover {
+    .about-button a:hover {
+        background-color: #292929;
+        color: #96b23f;
+    }
+
+    .portfolio-button a {
+        /* ボタンの文字の色 */
+        color: #d6ff4e;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* ボタンの背景色 */
+        background-color: #000;
+        /* ボタンの文字の大きさ */
+        font-size: 1.5rem;
+        /* ボタンの幅 */
+        width: 15rem;
+        /* ボタンの高さ */
+        height: 5rem;
+
+        /* ボタンの角を丸くする */
+        border-radius: 2rem;
+        /* ボタンの文字の位置を中央に */
+        text-align: center;
+        /* ボタンの文字の位置を中央に */
+        line-height: 5rem;
+        /* ボタンの位置を中央に */
+        margin: 0 auto;
+        padding: 2rem;
+    }
+
+    .portfolio-button a:hover {
         background-color: #292929;
         color: #96b23f;
     }
