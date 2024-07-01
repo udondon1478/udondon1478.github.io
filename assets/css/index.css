@@ -128,6 +128,12 @@
         /*背景色*/
     }
 
+    .bxslider li {
+        display: block;
+        cursor: pointer;
+    }
+    
+
     /* ギャラリーセクション */
     .gallery {
         /* ギャラリーセクションの背景色 */
