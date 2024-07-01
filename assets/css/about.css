@@ -61,12 +61,13 @@
         /* ヒーローの文字の大きさ */
         font-size: 1rem;
         position: relative;
-        height: 80vh;
+        height: 100vh;
         width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
-        padding-top: 5rem;
+        padding-top: 10rem;
+        padding-bottom: 10rem;
     }
 
     .about {
