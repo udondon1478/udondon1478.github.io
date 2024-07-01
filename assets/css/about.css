@@ -41,7 +41,8 @@
     }
 
     .nav-bar li {
-        margin: 1rem 1rem;
+        margin: 2rem 1.5rem;
+        
     }
 
     .nav-bar a {
@@ -69,7 +70,7 @@
 
     .about {
         /* フォントの大きさ */
-        font-size: 1.5rem;
+        font-size: 1rem;
         text-align: center;
         line-height: 1.5;
         color: #000;
