@@ -17,7 +17,9 @@
 
 <body>
 
-    <div class="loader"></div>
+    <div class="loading">
+        <span class="circle"></span>
+    </div>
     <!-- ヘッダー -->
     <header>
         <div class="SITE-HEADER">
@@ -65,7 +67,7 @@
     <main>
         <div class="my-timeline">
             <div class="picture">
-                <img src="assets\imgs\udon_high+_reso_remove_bg.png" alt="udon">
+                <img src="assets\imgs\udon_high+_reso_remove_bg.png" alt="udon" loading="lazy">
             </div>
             <div class="text">
                 <h1>私の経歴</h1>
@@ -78,7 +80,7 @@
                         <div class="bead"></div>
                         <div class="content">
                             <h2>海中アニメーション</h2>
-                            <img src="assets\imgs\fish.png" alt="fish">
+                            <img src="assets\imgs\fish.png" alt="fish" loading="lazy">
                             <p>
                                 Mayaを用いて作成した1分程度のアニメーション<br>
                                 2023-07-27
@@ -92,7 +94,7 @@
                         <div class="bead"></div>
                         <div class="content">
                             <h2>Sakekuzu Night</h2>
-                            <img src="assets\imgs\230701.jpg" alt="SN Vol.?">
+                            <img src="assets\imgs\230701.jpg" alt="SN Vol.?" loading="lazy">
                             <p>
                                 Drinker's Club主催の音楽を楽しむ夜
                                 2023-07-01
@@ -118,7 +120,7 @@
                         <div class="bead"></div>
                         <div class="content">
                             <h2>Tokyo Game Show 2022</h2>
-                            <img src="assets\imgs\TGS2022.jpg" alt="TGS2022">
+                            <img src="assets\imgs\TGS2022.jpg" alt="TGS2022" loading="lazy">
                             <p>
                                 トーキョーゲームショー2022に作成したゲームを出展しました<br>
                                 2022-09-15
@@ -139,11 +141,11 @@
             <div class="social-links">
                 <div class="mixcloud">
                     <a href="https://www.mixcloud.com/udondon1478/" target="_blank"><img src="assets\imgs\faviconV2.png"
-                            alt="mixcloud"></a>
+                            alt="mixcloud" loading="lazy"></a>
                 </div>
                 <div class="twitter">
                     <a href="https://twitter.com/udondon1478VRC" target="_blank"><img
-                            src="assets\imgs\2021 Twitter logo - blue.png" alt="twitter"></a>
+                            src="assets\imgs\2021 Twitter logo - blue.png" alt="twitter" loading="lazy"></a>
                 </div>
             </div>
             <div class="footer-text">
@@ -165,28 +167,44 @@
         padding: 0;
     }
 
-/* HTML: <div class="loader"></div> */
-.loader {
-  width: fit-content;
-  font-weight: bold;
-  font-family: monospace;
-  font-size: 30px;
-  background:linear-gradient(90deg,#000 50%,#0000 0) right/200% 100%;
-  animation: l21 2s infinite linear;
-}
-.loader::before {
-  content :"Loading...";
-  color: #0000;
-  padding: 0 5px;
-  background: inherit;
-  background-image: linear-gradient(90deg,#fff 50%,#000 0);
-  -webkit-background-clip:text;
-          background-clip:text;
-}
+    .loading {
+        position: fixed;
+        z-index: 1000;
+        width: 100%;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        background: #fdfdfd;
+    }
 
-@keyframes l21{
-  100%{background-position: left}
-}
+    .loading.hide {
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 500ms;
+    }
+
+    .loading .circle {
+        display: block;
+        position: relative;
+        top: calc(50% - 20px);
+        width: 40px;
+        height: 40px;
+        margin: 0 auto;
+        border: 8px solid #e0e0e0;
+        border-top: 7px solid #ffcccc;
+        border-radius: 50px;
+        animation: loading 700ms linear 0ms infinite normal both;
+    }
+
+    @keyframes loading {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
 </style>
 
 </html>
