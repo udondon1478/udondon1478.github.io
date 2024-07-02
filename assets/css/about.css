@@ -256,6 +256,16 @@
         width: calc(50% - 2rem);
     }
 
+    .content li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .bx-viewport li{
+        height: 100%;
+    }
+
     .bx-wrapper .bx-pager.bx-default-pager a {
         background: #cfcfcf;
     }
