@@ -115,6 +115,18 @@
         margin: 0 auto;
     }
 
+    
+    .bx-wrapper {
+        margin: 0 auto;
+        padding-bottom: 60px ;
+        border: #171717 ;
+        background: #171717 ;
+        z-index: 2;
+    }
+    
+
+    
+
     .bxslider {
         /*class="slider"の子要素divを指定*/
         height: 100%;
@@ -131,6 +143,14 @@
     .bxslider li {
         display: block;
         cursor: pointer;
+    }
+
+    .bx-wrapper .bx-pager.bx-default-pager a {
+        background: #cfcfcf;
+    }
+
+    .bx-wrapper .bx-pager.bx-default-pager a.active {
+        background: #d6ff4e;
     }
     
 
@@ -150,10 +170,12 @@
         width: 100%;
         /* コンタクトセクションの位置を中央に */
         margin: 0 auto;
+        padding-top: 60px;
         position: relative;
         display: flex;
         justify-content: center;
         align-items: center;
+        z-index: 1;
     }
 
     /*
