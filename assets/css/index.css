@@ -36,6 +36,10 @@
     }
   }
 
+  body {
+    background-color: #171717;
+  }
+
     .SITE-HEADER {
         background-color: #d6ff4e;
     }
@@ -308,7 +312,7 @@
         /* 線の長さ */
         width: 80%;
         /* 線を垂直中央に配置 */
-        margin: 0 auto;
+        margin: 0.2rem auto;
     }
 
     footer .line::before {
