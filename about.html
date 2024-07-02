@@ -9,10 +9,28 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=BIZ+UDGothic&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets\css\about.css">
-    <link rel="stylesheet" media="screen and (max-width: 899px)" href="assets\css\about_mobile.css">
     <link rel="icon" href="assets/imgs/favicon.ico" id="favicon">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/imgs/apple-touch-icon-180x180.png">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bxslider@4.2.17/dist/jquery.bxslider.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bxslider@4.2.17/dist/jquery.bxslider.min.js"></script>
+
+    <link rel="stylesheet" href="assets\css\about.css">
+    <link rel="stylesheet" media="screen and (max-width: 899px)" href="assets\css\about_mobile.css">
+
+    <script>
+        $(document).ready(function () {
+            $('.bxslider').bxSlider({
+                easing: 'ease-in-out',
+                captions: true,
+                auto: true,
+                controls: false,
+                maxSlides: 3,
+                minSlides: 2,
+            });
+        });
+    </script>
 </head>
 
 <body>
@@ -91,9 +109,15 @@
                         <div class="bead"></div>
                         <div class="content">
                             <h2>外部映像ストリーミング環境構築</h2>
-                            <img src="assets/imgs/OSSRS.png" alt="OSSRS" loading="lazy">
+
+                            <ul class="bxslider">
+                                <li><img src="assets/imgs/srs-200x200.png" alt="SRS1" loading="lazy"></li>
+                                <li><img src="assets/imgs/OSSRS.png" alt="SRS2" loading="lazy"></li>
+                            </ul>
                             <p>
-                                Dockerを用いてSRS(Simple Realtime Server)を使える環境を構築しました<br>これにより、IPアドレスを指定し、外部デバイスからサーバーへの映像ストリーミングが可能に<br>RTMP, WebRTCをはじめにSRTやMPEG-DASHといった多様なプロトコルに対応<br>
+                                Dockerを用いてSRS(Simple Realtime
+                                Server)を使える環境を構築しました<br>これにより、IPアドレスを指定し、外部デバイスからサーバーへの映像ストリーミングが可能に<br>RTMP,
+                                WebRTCをはじめにSRTやMPEG-DASHといった多様なプロトコルに対応<br>
                                 2023-11-05
                             </p>
                         </div>
@@ -128,7 +152,8 @@
                         <div class="bead"></div>
                         <div class="content">
                             <h2>海中アニメーション</h2>
-                            <a href="https://youtu.be/jGhm9toHtw8"><img src="assets\imgs\fish.png" alt="fish" loading="lazy"></a>
+                            <a href="https://youtu.be/jGhm9toHtw8"><img src="assets\imgs\fish.png" alt="fish"
+                                    loading="lazy"></a>
                             <p>
                                 Mayaを用いて作成した1分程度のアニメーション<br>YouTubeにて公開
                                 2023-07-27
@@ -163,7 +188,7 @@
                         </div>
                     </div>
 
-                    
+
                 </div>
             </div>
             <script src="assets\js\timeline.js"></script>
@@ -243,4 +268,3 @@
 </style>
 
 </html>
-
