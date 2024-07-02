@@ -228,6 +228,11 @@
     .section video{
         max-width: 100%;
     }
+    
+    .section a{
+        display: block;
+        cursor: pointer;
+    }
 
     .section:nth-child(odd) {
         flex-direction: row-reverse;
