@@ -60,6 +60,18 @@
   background-color: #171717;
 }
 
+.description {
+  padding-top: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.description h1 {
+  color: #c4c4c4;
+  font-size: 2rem;
+}
+
 /* Isotopeのスタイル */
 .grid {
   background-color: #171717;
