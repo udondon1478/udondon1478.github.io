@@ -252,11 +252,19 @@
   width: calc(50% - 2rem);
 }
 
-.bxslider li {
-    position: relative;
+.content li {
     display: flex;
+    justify-content: center;
     align-items: center;
-    
+}
+
+/*liタグの要素幅が縦0になってるからここで高さ合わせて中央揃え*/
+.bx-viewport ul {
+    height: 100%;
+}
+
+.bx-viewport li {
+    height: 100%;
 }
 
 .bx-wrapper .bx-pager.bx-default-pager a {
